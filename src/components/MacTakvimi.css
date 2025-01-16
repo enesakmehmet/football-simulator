@@ -1,0 +1,150 @@
+.mac-takvimi-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mac-takvimi-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.tabs button:hover {
+  background-color: #e0e0e0;
+}
+
+.tabs button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.mac-listesi {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mac-karti {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+}
+
+.mac-tarih {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.tarih {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.saat {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.mac-detay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.takim {
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.ev-sahibi {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.deplasman {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.vs {
+  font-size: 1rem;
+  color: #666;
+  padding: 0 20px;
+}
+
+.skor {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  padding: 0 20px;
+}
+
+.stadyum {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.detay-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.detay-link:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .mac-detay {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .ev-sahibi, .deplasman {
+    text-align: center;
+    padding: 0;
+  }
+
+  .vs, .skor {
+    margin: 10px 0;
+  }
+
+  .takim {
+    font-size: 1rem;
+  }
+} 

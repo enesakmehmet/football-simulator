@@ -1,0 +1,68 @@
+.takimlar {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.takimlar h2 {
+  color: #1a237e;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.takim-listesi {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.takim-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.takim-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.takim-card h3 {
+  color: #1a237e;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.takim-bilgi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.takim-bilgi p {
+  color: #666;
+}
+
+.takim-bilgi strong {
+  color: #1a237e;
+  margin-right: 0.5rem;
+}
+
+.takim-renkler {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.renk-kutu {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+} 

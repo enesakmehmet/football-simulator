@@ -1,0 +1,123 @@
+.oyuncu-profil-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.oyuncu-kart {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.oyuncu-baslik {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.oyuncu-baslik h1 {
+  margin: 0;
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.oyuncu-temel-bilgi {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.takim {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.forma {
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.oyuncu-detaylar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.detay-grup {
+  text-align: center;
+}
+
+.detay-grup label {
+  display: block;
+  color: #666;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.detay-grup span {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.istatistikler {
+  margin-top: 30px;
+}
+
+.istatistikler h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.istatistik-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.istatistik-item {
+  text-align: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.istatistik-item:hover {
+  transform: translateY(-5px);
+}
+
+.istatistik-item .deger {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.istatistik-item label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .oyuncu-detaylar {
+    grid-template-columns: 1fr;
+  }
+
+  .istatistik-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .oyuncu-baslik h1 {
+    font-size: 2rem;
+  }
+} 

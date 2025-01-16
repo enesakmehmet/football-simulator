@@ -1,0 +1,148 @@
+.canli-maclar-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.canli-maclar-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.mac-listesi {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mac-karti {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+}
+
+.mac-baslik {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.canli-badge {
+  background-color: #ff4444;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.dakika {
+  color: #666;
+  font-weight: bold;
+}
+
+.mac-detay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.takim {
+  flex: 1;
+  text-align: center;
+}
+
+.ev-sahibi {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.deplasman {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.takim-adi {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.skor {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  padding: 0 20px;
+}
+
+.mac-olaylar {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-bottom: 15px;
+}
+
+.olay {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.olay-dakika {
+  color: #666;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.olay-detay {
+  color: #333;
+}
+
+.detay-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.detay-link:hover {
+  background-color: #0056b3;
+}
+
+.no-matches {
+  text-align: center;
+  color: #666;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .mac-detay {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ev-sahibi, .deplasman {
+    text-align: center;
+    padding: 0;
+  }
+
+  .skor {
+    font-size: 20px;
+  }
+
+  .takim-adi {
+    font-size: 16px;
+  }
+} 

@@ -1,0 +1,64 @@
+.mac-detay {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mac-ozet {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mac-ozet h2 {
+  color: #1a237e;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mac-ozet p {
+  color: #666;
+}
+
+.istatistikler {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.istatistik-satir {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.istatistik-satir:last-child {
+  border-bottom: none;
+}
+
+.istatistik-baslik {
+  text-align: center;
+  color: #666;
+  font-weight: 500;
+}
+
+.istatistik-satir span:first-child {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.istatistik-satir span:last-child {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.istatistik-satir span:not(.istatistik-baslik) {
+  font-weight: bold;
+  color: #1a237e;
+} 

@@ -1,0 +1,57 @@
+.puan-durumu {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.puan-durumu h2 {
+  color: #1a237e;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #1a237e;
+  color: white;
+  font-weight: 500;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tr:hover {
+  background-color: #f1f3f5;
+}
+
+td:nth-child(2) {
+  text-align: left;
+  font-weight: 500;
+}
+
+tr:nth-child(1) td {
+  background-color: #4caf50;
+  color: white;
+}
+
+tr:nth-child(2) td,
+tr:nth-child(3) td,
+tr:nth-child(4) td {
+  background-color: #81c784;
+  color: white;
+} 

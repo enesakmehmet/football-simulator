@@ -1,0 +1,388 @@
+/* Arka plan ve genel stil */
+body {
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+body::before {
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 30%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 2%, transparent 2%, transparent 4%);
+  animation: backgroundShift 30s linear infinite;
+}
+
+body::after {
+  background: 
+    linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.05) 50%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(255, 255, 255, 0.05) 50%, transparent 52%);
+  background-size: 30px 30px;
+  animation: patternMove 20s linear infinite;
+}
+
+@keyframes backgroundShift {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-5%, -5%) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes patternMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+.takim-detay {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  animation: fadeIn 0.8s ease-in-out;
+  position: relative;
+}
+
+.takim-detay::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatBubble 10s ease-in-out infinite;
+}
+
+@keyframes floatBubble {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-30px, 30px) scale(1.2);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.takim-baslik {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.takim-baslik h1 {
+  color: #1a237e;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.takim-baslik h1::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #1a237e;
+  transform: translateX(-100%);
+  animation: underline 1s ease-out forwards;
+}
+
+@keyframes underline {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.takim-renkler {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.renk-kutu {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.renk-kutu:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.takim-bilgileri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bilgi-kutu {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bilgi-kutu:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.bilgi-kutu h3 {
+  color: #1a237e;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.bilgi-kutu h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #1a237e;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.bilgi-kutu:hover h3::after {
+  transform: scaleX(1);
+}
+
+.kadro h2 {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 2rem 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #1a237e;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.oyuncu-listesi {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  animation: fadeInGrid 0.8s ease-out;
+}
+
+@keyframes fadeInGrid {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.oyuncu-kart {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: cardAppear 0.5s ease-out backwards;
+}
+
+.oyuncu-kart:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.forma-no {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #1a237e, #3949ab);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(26, 35, 126, 0.3);
+}
+
+.oyuncu-kart:hover .forma-no {
+  transform: rotate(360deg);
+}
+
+.oyuncu-bilgi {
+  flex: 1;
+}
+
+.oyuncu-bilgi h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1a237e;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.oyuncu-bilgi p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.oyuncu-kart:hover .oyuncu-bilgi p {
+  transform: translateX(5px);
+}
+
+.uyruk {
+  color: #1a237e !important;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}
+
+.uyruk::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #1a237e;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.oyuncu-kart:hover .uyruk::after {
+  transform: scaleX(1);
+}
+
+.hata {
+  text-align: center;
+  color: #d32f2f;
+  padding: 2rem;
+  font-size: 1.2rem;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+/* Responsive tasarım için medya sorguları */
+@media (max-width: 768px) {
+  .takim-detay {
+    padding: 1rem;
+  }
+  
+  .takim-baslik {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .oyuncu-listesi {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+} 
